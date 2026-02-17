@@ -149,109 +149,77 @@
             text-shadow: 0 0 10px #ff00ff;
         }
 
-        /* ===== Form Grid - اصلاح شده ===== */
+        /* ===== Form Grid ===== */
         .form-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             margin-bottom: 25px;
         }
 
-        /* حالت موبایل */
-        @media (max-width: 1200px) {
-            .form-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 900px) {
-            .form-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: #00f7ff;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
-        input, select, textarea {
+        input, select {
             width: 100%;
-            padding: 10px 12px;
+            padding: 14px 18px;
             border: 2px solid #00f7ff;
-            border-radius: 10px;
+            border-radius: 12px;
             background: rgba(0, 0, 0, 0.5);
             color: #fff;
             font-family: 'Vazirmatn', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             transition: all 0.3s;
             outline: none;
         }
 
-        textarea {
-            resize: vertical;
-            min-height: 80px;
-            max-height: 150px;
-        }
-
-        input:focus, select:focus, textarea:focus {
+        input:focus, select:focus {
             border-color: #ff00ff;
-            box-shadow: 0 0 15px #ff00ff;
-            transform: scale(1.01);
+            box-shadow: 0 0 20px #ff00ff;
+            transform: scale(1.02);
         }
 
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 12px;
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
         }
 
         input[type="file"] {
-            padding: 8px;
+            padding: 10px;
             background: rgba(0, 247, 255, 0.1);
             border-style: dashed;
             cursor: pointer;
-            font-size: 12px;
         }
 
         input[type="file"]::-webkit-file-upload-button {
             background: #00f7ff;
             color: #000;
-            padding: 6px 12px;
+            padding: 8px 15px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 700;
             cursor: pointer;
-            margin-left: 8px;
-            font-size: 12px;
+            margin-left: 10px;
         }
 
         select {
             cursor: pointer;
             appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2300f7ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300f7ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
             background-repeat: no-repeat;
-            background-position: left 12px center;
-            background-size: 14px;
-        }
-
-        /* فیلد تمام عرض */
-        .full-width {
-            grid-column: 1 / -1;
+            background-position: left 15px center;
+            background-size: 16px;
         }
 
         /* ===== Buttons ===== */
@@ -264,16 +232,16 @@
         }
 
         button {
-            padding: 12px 30px;
+            padding: 14px 35px;
             border: none;
-            border-radius: 40px;
+            border-radius: 50px;
             font-weight: 900;
-            font-size: 15px;
+            font-size: 16px;
             cursor: pointer;
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             font-family: 'Vazirmatn', sans-serif;
         }
 
@@ -294,14 +262,15 @@
 
         button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px currentColor;
+            box-shadow: 0 0 25px currentColor;
         }
 
         .btn-send {
             background: #00ffae;
             color: #000;
             box-shadow: 0 0 15px #00ffae;
-            min-width: 180px;
+            flex: 1;
+            min-width: 200px;
         }
 
         .btn-admin {
@@ -365,9 +334,9 @@
         }
 
         .card p {
-            margin-bottom: 8px;
-            font-size: 13px;
-            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         .card strong {
@@ -381,23 +350,23 @@
             right: 10px;
             background: #ff00ff;
             color: #fff;
-            padding: 4px 8px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             box-shadow: 0 0 10px #ff00ff;
         }
 
         .card-actions {
             display: flex;
-            gap: 8px;
-            margin-top: 12px;
+            gap: 10px;
+            margin-top: 15px;
         }
 
         .card-actions button {
             flex: 1;
-            padding: 8px;
-            font-size: 13px;
+            padding: 10px;
+            font-size: 14px;
         }
 
         /* ===== Admin Panel ===== */
@@ -406,7 +375,7 @@
         }
 
         .admin-login {
-            max-width: 350px;
+            max-width: 400px;
             margin: 0 auto;
             text-align: center;
         }
@@ -415,15 +384,62 @@
         footer {
             text-align: center;
             color: #00f7ff;
-            padding: 25px;
+            padding: 30px;
             font-weight: 900;
-            font-size: 16px;
+            font-size: 18px;
             position: relative;
             z-index: 1;
             text-shadow: 0 0 10px #00f7ff;
-            margin-top: 40px;
-            border-top: 2px solid #00f7ff;
-            opacity: 0.9;
+            margin-top: 50px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .navbar {
+                width: 90%;
+                padding: 8px 15px;
+            }
+            
+            .navbar a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .section h2 {
+                font-size: 28px;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+
+        /* ===== Loading Animation ===== */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #00f7ff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* ===== Toast Notification ===== */
@@ -431,13 +447,12 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.9);
             border: 2px solid #00f7ff;
-            border-radius: 10px;
-            padding: 12px 20px;
+            border-radius: 12px;
+            padding: 15px 25px;
             color: #fff;
             font-weight: 700;
-            font-size: 14px;
             box-shadow: 0 0 20px #00f7ff;
             z-index: 2000;
             animation: slideIn 0.3s ease;
@@ -452,21 +467,6 @@
                 transform: translateX(0);
                 opacity: 1;
             }
-        }
-
-        /* ===== Loading Animation ===== */
-        .loading {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #00f7ff;
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -506,7 +506,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>📜 سابقه فکشن</label>
+                    <label>📜 سابقه در فکشن‌های دولتی</label>
                     <input type="text" id="gov_factionHistory" placeholder="نام فکشن‌های قبلی">
                 </div>
                 
@@ -540,14 +540,14 @@
                     <input type="text" id="gov_playTime" placeholder="مثال: 4-5 ساعت">
                 </div>
                 
-                <div class="form-group full-width">
+                <div class="form-group">
                     <label>🎯 هدف از لیدری</label>
-                    <textarea id="gov_leadGoal" rows="2" placeholder="هدف خود را بنویسید..."></textarea>
+                    <textarea id="gov_leadGoal" rows="3" style="width:100%; padding:14px; background:rgba(0,0,0,0.5); border:2px solid #00f7ff; border-radius:12px; color:#fff; font-family:inherit;"></textarea>
                 </div>
             </div>
 
             <h3>🏢 انتخاب فکشن دولتی</h3>
-            <select id="gov_factionSelect" style="width: 300px;">
+            <select id="gov_factionSelect">
                 <option value="Medic">🚑 Medic</option>
                 <option value="News">📰 News</option>
                 <option value="Army">💂 Army</option>
@@ -587,7 +587,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>🔫 سابقه فکشن</label>
+                    <label>🔫 سابقه در فکشن‌های گتو</label>
                     <input type="text" id="ghetto_factionHistory" placeholder="نام فکشن‌های قبلی">
                 </div>
                 
@@ -621,14 +621,14 @@
                     <input type="text" id="ghetto_playTime" placeholder="مثال: 4-5 ساعت">
                 </div>
                 
-                <div class="form-group full-width">
+                <div class="form-group">
                     <label>🎯 هدف از لیدری</label>
-                    <textarea id="ghetto_leadGoal" rows="2" placeholder="هدف خود را بنویسید..."></textarea>
+                    <textarea id="ghetto_leadGoal" rows="3" style="width:100%; padding:14px; background:rgba(0,0,0,0.5); border:2px solid #00f7ff; border-radius:12px; color:#fff; font-family:inherit;"></textarea>
                 </div>
             </div>
 
             <h3>🔪 انتخاب فکشن گتو</h3>
-            <select id="ghetto_factionSelect" style="width: 300px;">
+            <select id="ghetto_factionSelect">
                 <option value="Vagos">💛 Vagos</option>
                 <option value="Ballas">💜 Ballas</option>
                 <option value="Rifa">💚 Rifa</option>
@@ -663,7 +663,7 @@
     </div>
 
     <footer>
-        <p>🐉 Dragon RolePlay | ساخته شده توسط @Mashin_Mazndarn</p>
+        <p>🐉 Dragon RolePlay | همه حقوق محفوظ است © سازنده @Mashin_Mazndarn2026</p>
     </footer>
 
     <script>
@@ -696,18 +696,12 @@
 
         // ریست فرم
         function resetForm(type) {
-            const inputs = document.querySelectorAll(`#${type} input, #${type} textarea`);
+            const inputs = document.querySelectorAll(`#${type} input, #${type} textarea, #${type} select`);
             inputs.forEach(input => {
                 if (input.type !== 'file') {
                     input.value = '';
                 }
             });
-            
-            const selects = document.querySelectorAll(`#${type} select`);
-            selects.forEach(select => {
-                select.selectedIndex = 0;
-            });
-            
             showToast('✅ فرم پاک شد', 'success');
         }
 
@@ -802,7 +796,7 @@
                     <p><strong>🎂 سن واقعی:</strong> ${forum.realAge || 'نامشخص'}</p>
                     <p><strong>📱 روبیکا:</strong> ${forum.rubika || 'نامشخص'}</p>
                     <p><strong>⏰ تایم پلی:</strong> ${forum.playTime || 'نامشخص'}</p>
-                    <p><strong>🎯 هدف:</strong> ${forum.goal.substring(0, 50)}${forum.goal.length > 50 ? '...' : ''}</p>
+                    <p><strong>🎯 هدف:</strong> ${forum.goal}</p>
                     <p><strong>🏢 فکشن:</strong> ${forum.faction}</p>
                     <p><strong>📅 تاریخ:</strong> ${forum.date}</p>
                     <div class="card-actions">
@@ -833,6 +827,9 @@
             localStorage.setItem('pendingForums', JSON.stringify(forums));
             loadAdmin();
         }
+
+        // نمایش اولین بخش
+        document.getElementById('gov').classList.add('active');
     </script>
 </body>
 </html>
